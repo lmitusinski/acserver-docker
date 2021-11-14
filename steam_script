@@ -1,0 +1,4 @@
+login <STEAM_USER> <STEAM_PASS> <STEAM_CODE>
+force_install_dir ./assetto
+app_update 302550
+exit
