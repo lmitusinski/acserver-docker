@@ -4,5 +4,5 @@ module.exports = {
   sTrackerPath: '',
   username: '<ACM_USER>',
   password: '<ACM_PASS>',
-  port: '<ACM_PORT>'
+  port: '8080'
 };

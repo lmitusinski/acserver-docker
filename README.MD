@@ -22,7 +22,11 @@ web GUI for server management. It is also possible to provide additional content
 1. Replace command env params with server settings:   
     - `[USER]` - user name for ac manager console admin
     - `[PASS]` - password for ac manager console admin
-    - `[PORT]` - port on which server management console will be available
+    - `[PORT]` - port on which server management console will be available (default 8080)
     - `[CONTENT]` - path to `content` directory with additional tracks and cars
+    - `[ACS_UDP_PORT]` - UDP/TCP port for server communication (default 9600)
+    - `[ACS_HTTP_PORT]` - HTTP port for server communication (default 8081)
 1. Run docker run command 
-   `docker run --rm -p [PORT]:[PORT] -e ACM_USER=[USER] -e ACM_PASS=[PASS] -e ACM_PORT=[PORT] -v [CONTENT]:/tmp/content`
+   `docker run --rm -p [ACS_UDP_PORT]:9600/tcp -p [ACS_UDP_PORT]:9600/udp -p [ACS_HTTP_PORT]:8081/tcp -p [PORT]:8080/tcp \ 
+   -e ACM_USER=[USER] -e ACM_PASS=[PASS] \
+   -v [CONTENT]:/tmp/content acserver`
